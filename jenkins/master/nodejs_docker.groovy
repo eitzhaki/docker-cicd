@@ -10,7 +10,7 @@ job('NodeJS Docker example') {
     }
     steps {
         dockerBuildAndPublish {
-            repositoryName(eyali/test)
+            repositoryName('eyali/test')
             tag('${GIT_REVISION,length=9}')
             registryCredentials('eyali-repo')
             buildContext('basics')
