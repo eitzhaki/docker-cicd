@@ -2,7 +2,7 @@ pipelineJob('boilerplate-pipeline') {
     definition{
         cpsScm {
             scm{
-                git('git://github.com/eitzhaki/docker-cicd.git', 'master') {  node -> // is hudson.plugins.git.GitSCM
+                git('git://github.com/eitzhaki/docker-cicd.git', 'advanced') {  node -> // is hudson.plugins.git.GitSCM
             }
             scriptPath(readFileFromWorkspace('./basic/misc/Jenkinsfile.v2'))
             }
