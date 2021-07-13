@@ -17,7 +17,7 @@ job('NodeJS Docker example') {
             repositoryName(eitzhaki/test)
             tag('${GIT_REVISION,length=9}')
             registryCredentials('eyali-repo')
-          buildContext(./jenkins/master/nodejs.groovy)
+          buildContext('./jenkins/master/nodejs.groovy')
             forcePull(false)
             forceTag(false)
             createFingerprints(false)
