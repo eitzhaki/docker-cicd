@@ -14,7 +14,7 @@ job('NodeJS Docker example') {
     }
     steps {
         dockerBuildAndPublish {
-            repositoryName(eitzhaki/test)
+            repositoryName(eyali/test)
             tag('${GIT_REVISION,length=9}')
             registryCredentials('eyali-repo')
           buildContext('./jenkins/master/nodejs.groovy')
