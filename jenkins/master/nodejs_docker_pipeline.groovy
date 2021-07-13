@@ -5,7 +5,7 @@ pipelineJob('boilerplate-pipeline') {
                 git('git://github.com/eitzhaki/docker-cicd.git', 'master') {  node -> // is hudson.plugins.git.GitSCM
             }
             scriptPath(readFileFromWorkspace('./basic/misc/Jenkinsfile.v2'))
-            
+            }
         }
     }
 
