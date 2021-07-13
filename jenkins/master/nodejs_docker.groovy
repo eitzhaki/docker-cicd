@@ -8,16 +8,12 @@ job('NodeJS Docker example') {
     triggers {
         scm('H/5 * * * *')
     }
-    wrappers {
-        nodejs('nodejs') // this is the name of the NodeJS installation in 
-                         // Manage Jenkins -> Configure Tools -> NodeJS Installations -> Name
-    }
     steps {
         dockerBuildAndPublish {
             repositoryName(eyali/test)
             tag('${GIT_REVISION,length=9}')
             registryCredentials('eyali-repo')
-          buildContext('./jenkins/master/nodejs.groovy')
+            buildContext('./jenkins/master/nodejs.groovy')
             forcePull(false)
             forceTag(false)
             createFingerprints(false)
