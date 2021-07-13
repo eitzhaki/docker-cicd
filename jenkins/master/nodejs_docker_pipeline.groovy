@@ -3,12 +3,11 @@ pipelineJob('boilerplate-pipeline') {
         cpsScm {
             scm{
                 git('git://github.com/eitzhaki/docker-cicd.git', 'master') {  node -> // is hudson.plugins.git.GitSCM
+                }
+                scriptPath('./basics/misc/Jenkinsfile.v2')
+                }
             }
-            scriptPath('./basics/misc/Jenkinsfile.v2')
-            
         }
-    }
-
     triggers {
         scm('H/5 * * * *')
     }
