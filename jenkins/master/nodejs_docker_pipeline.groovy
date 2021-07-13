@@ -1,7 +1,7 @@
 pipelineJob('boilerplate-pipeline') {
     scm {
              scriptPath('./basic/misc/Jenkinsfile.v2')
-        }
+        
     }
     triggers {
         scm('H/5 * * * *')
