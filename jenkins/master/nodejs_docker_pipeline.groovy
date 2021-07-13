@@ -3,6 +3,7 @@ pipelineJob('boilerplate-pipeline') {
         git('git://github.com/eitzhaki/docker-cicd.git', 'master') {  node -> // is hudson.plugins.git.GitSCM
             node / gitConfigName('DSL User')
             node / gitConfigEmail('jenkins-dsl@newtech.academy')
+            scriptPath('./basic/misc/Jenkinsfile.v2')
         }
     }
     triggers {
